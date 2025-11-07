@@ -5,6 +5,7 @@ import cors from "cors";
 import { errorHandler } from "./middlewares/errorHandler.middleware.js";
 import logger from "./utils/logger.util.js";
 import { authRouter } from "./routes/auth.route.js";
+import { userRouter } from "./routes/user.route.js";
 // import { authRouter } from "./routes/auth.route.js";
 // import { userRouter } from "./routes/user.route.js";
 // import { enquiryRouter } from "./routes/enquiry.route.js";
@@ -130,7 +131,7 @@ app.get("/", (req, res) => {
 
 // API routes
 app.use("/api/auth", authRouter);
-// app.use("/api/users", userRouter);
+app.use("/api/users", userRouter);
 // app.use("/api/enquiries", enquiryRouter);
 // app.use("/api/categories", categoryRouter);
 // app.use("/api/products", productRouter);

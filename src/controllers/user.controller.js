@@ -7,8 +7,8 @@ import { hashPassword } from '../utils/password.util.js';
 import { addToCart, addToWishlist, countUsers, createAddress, createUser, deleteAddress, fetchManyAddress, fetchOneAddress, fetchSingleAddress, getCart, getManyUsers, getUserByEmail, getUserById, getUserByMobile, getWishlist, removeFromCart, removeFromWishlist, setCart, updateAddress, updateCart, updateUser, updateUserStatus } from '../services/user.service.js';
 import { genderList } from '../config/data.js';
 import { isValidObjectId } from 'mongoose';
-import { findManyOrders } from '../services/order.service.js';
-import { checkIfVariantExists, getProductById } from '../services/product.service.js';
+// import { findManyOrders } from '../services/order.service.js';
+// import { checkIfVariantExists, getProductById } from '../services/product.service.js';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
