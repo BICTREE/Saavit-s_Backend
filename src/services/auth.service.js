@@ -8,7 +8,7 @@ const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 export const sendOTPViaEmail = async (email, OTP) => {
     try {
         const mailObj = {
-            from: `"Bindu Jewellery" <${process.env.MAIL_USER}>`,
+            from: `"Saavits" <${process.env.MAIL_USER}>`,
             to: email,
             subject: "OTP for Authentication",
             html: `
