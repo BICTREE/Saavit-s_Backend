@@ -6,22 +6,12 @@ import { errorHandler } from "./middlewares/errorHandler.middleware.js";
 import logger from "./utils/logger.util.js";
 import { authRouter } from "./routes/auth.route.js";
 import { userRouter } from "./routes/user.route.js";
-// import { authRouter } from "./routes/auth.route.js";
-// import { userRouter } from "./routes/user.route.js";
-// import { enquiryRouter } from "./routes/enquiry.route.js";
-// import { productRouter } from "./routes/product.route.js";
-// import { bannerRouter } from "./routes/banner.route.js";
-// import { categoryRouter } from "./routes/category.route.js";
-// import { reviewRouter } from "./routes/review.route.js";
-// import { uploadRouter } from "./routes/upload.route.js";
-// import { blogRouter } from "./routes/blog.route.js";
-// import { mediaRouter } from "./routes/media.route.js";
-// import { mediaGroupRouter } from "./routes/mediaGroup.route.js";
+import { productRouter } from "./routes/product.route.js";
+
 
 const app = express();
 
-const { user_dev_url, admin_dev_url, user_prod_url, admin_prod_url, NODE_ENV } =
-  process.env;
+const { user_dev_url, admin_dev_url, user_prod_url, admin_prod_url, NODE_ENV } = process.env;
 
 // Debug environment variables
 // console.log("=== Environment Debug ===");
@@ -132,9 +122,9 @@ app.get("/", (req, res) => {
 // API routes
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
+app.use("/api/products", productRouter);
 // app.use("/api/enquiries", enquiryRouter);
 // app.use("/api/categories", categoryRouter);
-// app.use("/api/products", productRouter);
 // app.use("/api/reviews", reviewRouter);
 // app.use("/api/uploads", uploadRouter);
 // app.use("/api/media", mediaRouter);
