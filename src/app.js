@@ -7,6 +7,7 @@ import logger from "./utils/logger.util.js";
 import { authRouter } from "./routes/auth.route.js";
 import { userRouter } from "./routes/user.route.js";
 import { productRouter } from "./routes/product.route.js";
+import { categoryRouter } from "./routes/category.route.js";
 
 
 const app = express();
@@ -123,8 +124,8 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
+app.use("/api/categories", categoryRouter);
 // app.use("/api/enquiries", enquiryRouter);
-// app.use("/api/categories", categoryRouter);
 // app.use("/api/reviews", reviewRouter);
 // app.use("/api/uploads", uploadRouter);
 // app.use("/api/media", mediaRouter);
