@@ -1,19 +1,17 @@
-import { Enquiry } from "../models/enquiry.model.js"
-
-
+import { Enquiry } from "../models/enquiry.model.js";
 
 export const createEnquiry = async (obj) => {
-    return await Enquiry.create(obj)
-}
+  return await Enquiry.create(obj);
+};
 
 export const findEnquiryById = async (id) => {
-    return await Enquiry.findById(id)
-}
+  return await Enquiry.findById(id);
+};
 
 export const getManyEnquiries = async (filters) => {
-    return await Enquiry.find(filters).sort({ createdAt: -1 })
-}
+  return await Enquiry.find(filters).sort({ createdAt: -1 });
+};
 
 export const deleteEnquiry = async (id) => {
-    return await Enquiry.findByIdAndDelete(id)
-}
+  return await Enquiry.findByIdAndDelete(id);
+};
